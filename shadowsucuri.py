@@ -21,7 +21,7 @@ for n in list(hash):
 	actualhash = n.split(":")[1].strip('\n')
 
 	fractioned = actualhash.split("$")
-	if fractioned[1] == "y":
+	if fractioned[1] == "y": #verifica se a hash trata-se de yescrypt 
 		salt = "${}${}${}$".format(fractioned[1],fractioned[2],fractioned[3])
 	else:
 		salt = "${}${}$".format(fractioned[1],fractioned[2])
